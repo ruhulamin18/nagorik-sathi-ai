@@ -1,0 +1,1678 @@
+# MASTER DEVELOPMENT PROMPT
+# NAGORIK SATHI AI — COMPLETE R&D PROTOTYPE
+
+## 1. YOUR ROLE
+
+Act as a Senior Full-Stack Software Engineer, AI Engineer, System Architect, UI/UX Designer, Database Engineer, Security Engineer, and QA Engineer.
+
+Your task is to build a complete, professional, functional web application named:
+
+**Nagorik Sathi AI (নাগরিক সাথী AI)**
+
+The application must strictly follow the functional requirements, workflow, architecture, AI pipeline, security requirements, and research objectives described in:
+
+`Nagorik_Sathi_AI_RnD_Proposal.docx`
+
+Read and understand the complete R&D document before implementing the application.
+
+Do not create a generic complaint management system.
+
+This is an AI-assisted citizen service coordination platform for Bangladesh City Corporations.
+
+The goal is to create a realistic, fully functional, research-ready software prototype that can be demonstrated to university researchers, government officials, stakeholders, and hackathon judges.
+
+---
+
+## 2. CORE PROJECT OBJECTIVE
+
+Build a platform where citizens can:
+
+- Submit complaints in Bangla.
+- Submit complaints through text, voice, image, and location.
+- Receive AI-assisted complaint classification.
+- Receive explainable department recommendations.
+- Discover relevant government services.
+- Track complaint progress.
+- View parent cases and associated sub-tasks.
+- Receive notifications.
+- Submit feedback and appeals.
+- Request case reopening if the problem remains unresolved.
+
+Government officers must be able to:
+
+- Review AI recommendations.
+- Approve or correct routing.
+- Assign department tasks.
+- Manage dependencies.
+- Update task status.
+- Upload completion evidence.
+- Verify resolutions.
+- Approve reopening or closure.
+- Escalate overdue cases.
+
+Supervisors must be able to:
+
+- Approve parent cases.
+- Review routing decisions.
+- Manage cross-department workflows.
+- Monitor overdue cases.
+- Approve final resolutions.
+- Approve reopening and closure.
+- Analyze operational performance.
+
+Administrators must be able to:
+
+- Manage users and roles.
+- Manage departments and wards.
+- Manage assets.
+- Configure responsibility rules.
+- Manage government services.
+- Manage approved government documents.
+- Configure SLA rules.
+- Monitor system integrations.
+- Review audit logs.
+
+Researchers must be able to:
+
+- Evaluate classification.
+- Evaluate routing.
+- Evaluate duplicate detection.
+- Evaluate RAG answers.
+- Evaluate usability.
+- Analyze workflow performance.
+- Export authorized research datasets.
+
+---
+
+## 3. PROJECT SCOPE
+
+Implement exactly the initial R&D scope.
+
+### Initial issue categories
+
+1. Waste Management
+2. Drainage
+3. Streetlight
+4. Road Damage
+
+Also support:
+
+- Other
+- Uncertain
+- Emergency Warning
+
+Do not expand the main operational scope to unrelated services such as land registration, taxation, licensing, or healthcare.
+
+### Pilot configuration
+
+Support:
+
+- One demo City Corporation.
+- Three to five demo wards.
+- Approximately 10–15 verified demo government services.
+- Synthetic assets.
+- Synthetic departments.
+- Synthetic complaint records.
+- Synthetic citizens.
+- Synthetic officers.
+- Synthetic government documents.
+
+All demo datasets must be clearly marked as synthetic.
+
+Never present synthetic data as real government data.
+
+---
+
+## 4. TECHNOLOGY STACK
+
+Use the following stack unless an existing project already uses a compatible alternative.
+
+- Next.js App Router
+- TypeScript
+- React
+- Tailwind CSS
+- shadcn/ui
+- Lucide React
+- Supabase PostgreSQL
+- Supabase Auth
+- Supabase Storage
+- React Hook Form
+- Zod
+- Recharts
+- Leaflet / React Leaflet
+- TanStack Table
+- Vitest
+- Playwright
+
+Use the latest compatible stable package versions.
+
+Use a maintainable, scalable architecture.
+
+Avoid unnecessary dependencies.
+
+---
+
+## 5. DESIGN SYSTEM
+
+Create a premium government technology platform interface.
+
+### Design direction
+
+- Professional
+- Clean
+- Modern
+- Trustworthy
+- Minimal
+- Accessible
+- Responsive
+- Enterprise-grade
+
+### Color palette
+
+Primary:
+- Navy: #17365D
+- Deep Navy: #102A43
+- Teal: #0891B2
+- Light Teal: #E6F7FA
+
+Background:
+- White: #FFFFFF
+- Light Gray: #F8FAFC
+- Border: #E2E8F0
+
+Status colors:
+- Success: Green
+- Warning: Amber
+- Error: Red
+- Information: Blue
+
+### UI requirements
+
+- Use consistent typography.
+- Use Bangla-compatible fonts such as Noto Sans Bengali.
+- Use Lucide icons.
+- Use consistent spacing.
+- Use clear status badges.
+- Use professional tables.
+- Use responsive charts.
+- Use accessible forms.
+- Use loading skeletons.
+- Use empty states.
+- Use error states.
+- Use confirmation dialogs.
+- Use toast notifications.
+- Use tooltips where necessary.
+- Avoid excessive gradients.
+- Avoid unnecessary animations.
+- Avoid oversized decorative sections.
+- Avoid generic AI-generated dashboard aesthetics.
+
+All dashboards must look like real production software.
+
+---
+
+## 6. APPLICATION ROUTING
+
+Create the following route structure.
+
+### Public routes
+
+- /
+- /assistant
+- /report
+- /services
+- /services/[id]
+- /track
+- /track/[caseId]
+- /about
+- /help
+- /login
+- /register
+- /forgot-password
+
+### Citizen routes
+
+- /citizen/dashboard
+- /citizen/cases
+- /citizen/cases/[id]
+- /citizen/feedback
+- /citizen/profile
+- /citizen/notifications
+
+### Officer routes
+
+- /officer/dashboard
+- /officer/queue
+- /officer/cases
+- /officer/cases/[id]
+- /officer/tasks
+- /officer/tasks/[id]
+- /officer/evidence
+- /officer/ward-map
+- /officer/notifications
+
+### Supervisor routes
+
+- /supervisor/dashboard
+- /supervisor/review
+- /supervisor/cases
+- /supervisor/cases/[id]
+- /supervisor/escalations
+- /supervisor/closure-review
+- /supervisor/analytics
+
+### Admin routes
+
+- /admin/dashboard
+- /admin/users
+- /admin/roles
+- /admin/departments
+- /admin/wards
+- /admin/assets
+- /admin/services
+- /admin/documents
+- /admin/routing-rules
+- /admin/sla
+- /admin/integrations
+- /admin/audit-logs
+- /admin/settings
+
+### Research routes
+
+- /research/dashboard
+- /research/classification
+- /research/routing
+- /research/duplicates
+- /research/rag
+- /research/usability
+- /research/datasets
+- /research/reports
+
+Implement route protection and role-based access.
+
+---
+
+## 7. CITIZEN PORTAL
+
+### 7.1 Homepage
+
+Create a professional Bangla-first homepage.
+
+Sections:
+
+1. Navbar
+2. Hero section
+3. AI complaint assistant
+4. Report a problem CTA
+5. Track complaint CTA
+6. Four issue category cards
+7. Government service discovery
+8. How it works
+9. Case status explanation
+10. Accessibility and assistance information
+11. Footer
+
+Hero headline:
+
+"আপনার এলাকার সমস্যায়, নাগরিক সাথী পাশে"
+
+Supporting text:
+
+"সহজ বাংলায় জানান আপনার সমস্যা। নাগরিক সাথী AI আপনাকে সঠিক সেবা ও দায়িত্বপ্রাপ্ত বিভাগের সঙ্গে যুক্ত হতে সহায়তা করবে।"
+
+Primary CTA:
+
+"সমস্যা জানান"
+
+Secondary CTA:
+
+"অভিযোগ ট্র্যাক করুন"
+
+Clearly explain that AI recommendations require official verification.
+
+### 7.2 AI Complaint Assistant
+
+Create an interactive assistant.
+
+Features:
+
+- Bangla text input.
+- Voice input.
+- Speech-to-text.
+- Image upload.
+- Location selection.
+- Map location picker.
+- Chat-style conversation.
+- Suggested prompts.
+- Follow-up questions.
+- Missing information detection.
+- Category recommendation.
+- Department recommendation.
+- Confidence indicator.
+- Explainable recommendation.
+- Human review indication.
+- Complaint submission confirmation.
+
+Do not submit a complaint until the citizen confirms the information.
+
+### 7.3 Complaint Form
+
+Fields:
+
+- Complaint title
+- Description
+- Issue category
+- Location
+- Ward
+- Landmark
+- Asset
+- Severity
+- Incident date
+- Optional image
+- Optional voice recording
+- Contact preference
+- Consent
+
+Validation:
+
+- Required fields.
+- Maximum upload size.
+- File type validation.
+- Location confirmation.
+- Consent confirmation.
+
+Support draft saving.
+
+### 7.4 Complaint Tracking
+
+Show:
+
+- Case ID
+- Complaint title
+- Category
+- Ward
+- Submission date
+- Current status
+- Assigned department
+- Parent case
+- Sub-task progress
+- SLA status
+- Timeline
+- Officer updates
+- Evidence
+- Citizen feedback
+- Reopen request
+
+Create a professional case tracking timeline.
+
+---
+
+## 8. AI COMPLAINT PROCESSING PIPELINE
+
+Implement the following pipeline exactly.
+
+### Step 1: Input Validation
+
+Validate:
+
+- Text
+- Voice transcript
+- Image
+- Location
+- Consent
+- Required fields
+
+### Step 2: Bengali Language Normalization
+
+Support:
+
+- Bangla spelling variations.
+- Common colloquial expressions.
+- Bengali numerals.
+- English-Bangla mixed text.
+- Common abbreviations.
+- Original text preservation.
+
+Do not destroy the original citizen input.
+
+### Step 3: Issue Classification
+
+Classify into:
+
+- Waste
+- Drainage
+- Streetlight
+- Road
+- Other
+- Uncertain
+
+Return:
+
+- Predicted category.
+- Confidence score.
+- Reason.
+- Relevant keywords.
+
+### Step 4: Entity Extraction
+
+Extract:
+
+- Ward name.
+- Road name.
+- Landmark.
+- Asset type.
+- Duration.
+- Severity clues.
+- Service keywords.
+- Location clues.
+
+### Step 5: Geospatial Resolution
+
+Use:
+
+- Ward polygons.
+- Asset registry.
+- Citizen-confirmed location.
+- Coordinates.
+- Location matching.
+
+Never silently change a citizen-confirmed location.
+
+### Step 6: Responsibility Recommendation
+
+Implement:
+
+- Deterministic rules.
+- Department mapping.
+- Ward mapping.
+- Asset ownership.
+- Responsibility explanation.
+- AI-assisted ranking.
+
+Rules must take precedence over ML ranking.
+
+### Step 7: Duplicate Detection
+
+Generate duplicate candidates using:
+
+- Location distance.
+- Time window.
+- Category.
+- Text similarity.
+- Asset similarity.
+- Optional image similarity.
+
+Do not automatically merge complaints.
+
+Provide:
+
+- Candidate cases.
+- Similarity score.
+- Match explanation.
+- Same incident confirmation.
+- Different incident confirmation.
+- Unmerge capability.
+
+### Step 8: RAG Service Answer
+
+Implement retrieval over approved government documents.
+
+Answers must contain:
+
+- Answer.
+- Source title.
+- Source URL.
+- Effective date.
+- Applicable jurisdiction.
+- Last verified date.
+
+If evidence is unavailable, state that the system cannot verify the answer.
+
+### Step 9: Confidence & Escalation
+
+Escalate to human review when:
+
+- Classification confidence is low.
+- Department ownership is uncertain.
+- Location is ambiguous.
+- Source data conflicts.
+- Asset is outside the pilot boundary.
+- Case is high impact.
+- Emergency indicators are detected.
+
+### Step 10: Outcome Learning
+
+Store approved outcomes for research.
+
+Support:
+
+- Error analysis.
+- Model evaluation.
+- Approved anonymized datasets.
+- Human correction records.
+
+Never automatically retrain from production data without governance approval.
+
+---
+
+## 9. RESPONSIBILITY ENGINE
+
+Create a dedicated responsibility engine.
+
+Inputs:
+
+- Issue category.
+- Ward.
+- Asset.
+- Location.
+- Department registry.
+- Responsibility rules.
+
+Outputs:
+
+- Recommended department.
+- Recommended owner.
+- Routing reason.
+- Rule reference.
+- Confidence.
+- Alternative departments.
+- Human review requirement.
+
+Implement a rules-first architecture.
+
+Examples:
+
+- Drainage asset → Drainage Department.
+- Road asset → Road Maintenance Department.
+- Streetlight asset → Electrical Department.
+- Waste issue → Waste Management Department.
+
+These are demo rules only.
+
+Make them configurable through the Admin Panel.
+
+Store every routing recommendation and approval.
+
+---
+
+## 10. PARENT CASE AND SUB-TASK ORCHESTRATION
+
+This is the most important business logic.
+
+Implement:
+
+### Parent Case
+
+Represents one real citizen incident.
+
+Contains:
+
+- Case ID.
+- Citizen.
+- Incident description.
+- Location.
+- Category.
+- Severity.
+- Related assets.
+- Department tasks.
+- Dependencies.
+- Overall status.
+- SLA.
+- Timeline.
+- Evidence.
+- Feedback.
+
+### Sub-task
+
+Each department task must contain:
+
+- Task ID.
+- Parent case ID.
+- Department.
+- Assigned officer.
+- Task description.
+- Priority.
+- Due date.
+- SLA.
+- Dependencies.
+- Blockers.
+- Status.
+- Evidence.
+- Comments.
+- Timeline.
+
+### Dependency Management
+
+Support:
+
+- Sequential tasks.
+- Parallel tasks.
+- Predecessor relationships.
+- Blocked state.
+- Dependency resolution.
+- Automatic status updates.
+
+Example:
+
+Waste removal → Drain cleaning → Road repair.
+
+The dependency must be configurable.
+
+### Notifications
+
+Trigger notifications for:
+
+- Case submission.
+- Routing review.
+- Assignment.
+- Task update.
+- Task blocked.
+- SLA warning.
+- Escalation.
+- Resolution submitted.
+- Resolution approved.
+- Case reopened.
+- Case closed.
+
+---
+
+## 11. CASE STATE MODEL
+
+Implement these states:
+
+- Submitted
+- Information needed
+- Under review
+- Assigned
+- In progress
+- Blocked
+- Resolution submitted
+- Resolved
+- Reopened
+- Closed
+- Rejected with reason
+
+Implement valid state transitions.
+
+Prevent unauthorized transitions.
+
+Every transition must store:
+
+- Actor.
+- Timestamp.
+- Previous state.
+- New state.
+- Reason.
+- Evidence reference.
+- Relevant task or case ID.
+
+Use an append-only, tamper-evident event history.
+
+A closed case must not silently become a new incident.
+
+New incidents must support linked cases.
+
+---
+
+## 12. EVIDENCE VERIFICATION
+
+Implement a complete evidence system.
+
+Evidence types:
+
+- Before image.
+- After image.
+- Officer comment.
+- Work completion report.
+- Timestamp.
+- Location metadata where permitted.
+- Citizen feedback.
+
+Workflow:
+
+1. Officer updates task.
+2. Officer uploads completion evidence.
+3. Officer submits resolution.
+4. Supervisor reviews evidence.
+5. Resolution is approved or rejected.
+6. Citizen is notified.
+7. Citizen can object.
+8. Relevant task can be reopened.
+
+Evidence must never automatically prove actual resolution.
+
+---
+
+## 13. CITIZEN FEEDBACK, APPEAL & REOPEN
+
+Implement:
+
+- Complaint correction request.
+- Routing objection.
+- "সমস্যা সমাধান হয়নি" option.
+- Reopen request.
+- Feedback.
+- Appeal reason.
+- Officer response.
+- Supervisor review.
+- Decision explanation.
+
+A citizen's silence must never be treated as satisfaction.
+
+A new incident after closure should create a linked case.
+
+---
+
+## 14. OFFICER CONSOLE
+
+Create a fully functional Officer Dashboard.
+
+### Dashboard widgets
+
+- Total assigned tasks.
+- Pending tasks.
+- In-progress tasks.
+- Blocked tasks.
+- Overdue tasks.
+- Resolution submitted.
+- Recent activity.
+- Ward map.
+- Department workload.
+- SLA alerts.
+
+### Officer features
+
+- Case review.
+- Task assignment.
+- Task status update.
+- Blocker management.
+- Evidence upload.
+- Resolution submission.
+- Comments.
+- Timeline.
+- Case search.
+- Filters.
+- Sorting.
+- Pagination.
+- Notifications.
+
+Officers must only access authorized department tasks.
+
+---
+
+## 15. SUPERVISOR CONSOLE
+
+Create:
+
+- Pending review queue.
+- Routing approval.
+- Routing override.
+- Parent case approval.
+- Cross-department task coordination.
+- Dependency review.
+- Escalation.
+- SLA monitoring.
+- Evidence review.
+- Resolution approval.
+- Closure approval.
+- Reopen approval.
+- Audit history.
+
+Routing override must require a reason.
+
+Store override events for research.
+
+---
+
+## 16. ADMIN PANEL
+
+Implement:
+
+### User Management
+
+- Create users.
+- Edit users.
+- Activate/deactivate.
+- Assign roles.
+- Assign departments.
+- Assign wards.
+
+### Department Management
+
+- Department ID.
+- Name.
+- Service area.
+- Operating hours.
+- Escalation contact.
+- Responsible issue categories.
+
+### Ward Management
+
+- Ward ID.
+- Ward name.
+- Boundary.
+- Area metadata.
+- Assets.
+
+### Asset Management
+
+- Asset ID.
+- Asset type.
+- Location.
+- Ward.
+- Owner department.
+- Maintenance department.
+- Status.
+
+### Service Catalogue
+
+- Service ID.
+- Service title.
+- Description.
+- Eligibility.
+- Required documents.
+- Fee.
+- SLA.
+- Official URL.
+- Jurisdiction.
+- Effective date.
+- Last verified date.
+
+### Routing Rules
+
+- Category mapping.
+- Ward mapping.
+- Asset ownership.
+- Department mapping.
+- Confidence thresholds.
+- Human review rules.
+
+### SLA Configuration
+
+- Department-specific SLA.
+- Priority-specific SLA.
+- Warning thresholds.
+- Escalation thresholds.
+
+### Document Management
+
+- Upload approved documents.
+- Document metadata.
+- Source URL.
+- Effective date.
+- Jurisdiction.
+- Version.
+- Review date.
+- Approval status.
+
+---
+
+## 17. GOVERNMENT SERVICE DISCOVERY
+
+Implement a government service discovery module.
+
+Features:
+
+- Search.
+- Category filters.
+- Service details.
+- Eligibility.
+- Required documents.
+- Fee.
+- SLA.
+- Official URL.
+- Applicable jurisdiction.
+- Effective date.
+- Last verified date.
+
+Implement approximately 10–15 synthetic demo services.
+
+Clearly label all synthetic services.
+
+Government integration levels:
+
+Level 1: Discover — implement now.
+
+Level 2: Read — simulated unless approved APIs exist.
+
+Level 3: Coordinate — simulated department integration.
+
+Level 4: Write/transaction — do not implement production write actions.
+
+Never claim real government API integration without actual authorization and working credentials.
+
+---
+
+## 18. RAG ASSISTANT
+
+Create a Bengali Government Service Assistant.
+
+Implement:
+
+- Document ingestion.
+- Document metadata.
+- Chunking.
+- Retrieval.
+- Search.
+- Answer generation.
+- Source citation.
+- Jurisdiction filtering.
+- Effective date filtering.
+- Outdated document warning.
+- No-source response.
+- Answer feedback.
+
+The assistant must answer only from approved documents for government service guidance.
+
+If no relevant source exists, respond:
+
+"এই প্রশ্নের জন্য যাচাইকৃত সরকারি তথ্য পাওয়া যায়নি। অনুগ্রহ করে সংশ্লিষ্ট সরকারি দপ্তরে যাচাই করুন।"
+
+Never invent government fees, eligibility, deadlines, or legal requirements.
+
+---
+
+## 19. ANALYTICS & RESEARCH DASHBOARD
+
+Create a dedicated Research Dashboard.
+
+### Routing Evaluation
+
+- Top-1 accuracy.
+- Wrong-routing rate.
+- Human escalation rate.
+- Routing confusion matrix.
+- Routing correction analysis.
+
+### Classification Evaluation
+
+- Macro-F1.
+- Precision.
+- Recall.
+- Class-wise metrics.
+- Confusion matrix.
+
+### Duplicate Evaluation
+
+- Precision.
+- Recall.
+- False merge rate.
+- Candidate review outcomes.
+
+### Workflow Evaluation
+
+- Case completion time.
+- Dependency delay.
+- Overdue rate.
+- Reopen rate.
+- Evidence completeness.
+
+### RAG Evaluation
+
+- Source correctness.
+- Answer support rate.
+- Outdated-source rate.
+
+### Usability Evaluation
+
+- Task success.
+- Median completion time.
+- Assistance needed.
+- Feedback.
+
+### Platform Evaluation
+
+- API availability.
+- Failed transaction.
+- Retry success.
+- Audit-log completeness.
+- Security findings.
+
+All metrics must be calculated from actual stored data.
+
+If demo metrics are used, label them:
+
+"Demo Evaluation — Synthetic Dataset"
+
+Do not fabricate scientific results.
+
+---
+
+## 20. DATABASE DESIGN
+
+Design a normalized PostgreSQL database.
+
+Required tables:
+
+- profiles
+- roles
+- permissions
+- user_roles
+- city_corporations
+- wards
+- ward_boundaries
+- departments
+- department_members
+- assets
+- responsibility_rules
+- services
+- service_documents
+- government_documents
+- document_chunks
+- cases
+- case_categories
+- case_locations
+- case_media
+- case_tasks
+- task_dependencies
+- task_assignments
+- case_events
+- task_events
+- evidence
+- routing_recommendations
+- routing_reviews
+- duplicate_candidates
+- duplicate_reviews
+- feedback
+- appeals
+- reopen_requests
+- notifications
+- SLA_rules
+- audit_logs
+- integration_logs
+- research_datasets
+- research_evaluations
+
+Create appropriate:
+
+- Foreign keys.
+- Indexes.
+- Unique constraints.
+- Check constraints.
+- Timestamps.
+- Soft deletion where appropriate.
+- Row-level security.
+- Audit triggers.
+
+Use PostGIS if available.
+
+If PostGIS is unavailable, provide a compatible geospatial fallback.
+
+Create SQL migrations.
+
+Create seed scripts.
+
+---
+
+## 21. RBAC & SECURITY
+
+Implement these roles:
+
+1. Citizen
+2. Ward Desk / Assistant
+3. Department Officer
+4. Supervisor / Chief Officer
+5. System Administrator
+6. Data / AI Researcher
+7. Auditor
+
+Permissions:
+
+Citizen:
+- View own cases.
+- Edit allowed information.
+- Submit feedback.
+- Request reopening.
+- View own case evidence.
+
+Ward Desk:
+- Create cases with citizen permission.
+- Assist citizens.
+- Complete missing information.
+
+Officer:
+- View department tasks.
+- Update task status.
+- Upload evidence.
+- Submit resolutions.
+
+Supervisor:
+- Review routing.
+- Approve parent cases.
+- Escalate.
+- Approve closure.
+- Approve reopening.
+
+Administrator:
+- Manage configuration.
+- Manage users.
+- Manage system settings.
+
+Researcher:
+- Access approved de-identified datasets.
+- Run evaluations.
+- Export permitted metrics.
+
+Auditor:
+- View authorized audit trails.
+- Cannot modify cases.
+
+Security requirements:
+
+- Least privilege.
+- Secure authentication.
+- MFA support for privileged users.
+- Row-level security.
+- Server-side authorization.
+- Input validation.
+- Rate limiting.
+- Secure file upload.
+- File size restrictions.
+- Content type validation.
+- Secret management.
+- Session security.
+- Tamper-evident audit logs.
+- Encryption in transit.
+- Secure storage.
+- Error handling.
+- No production personal data in development.
+- Consent.
+- Data minimization.
+
+Never rely on frontend role checks alone.
+
+---
+
+## 22. INTEGRATION ARCHITECTURE
+
+Create provider-independent integration interfaces.
+
+Required adapters:
+
+- GovernmentServiceAdapter.
+- WardRegistryAdapter.
+- AssetRegistryAdapter.
+- DepartmentDirectoryAdapter.
+- ComplaintSystemAdapter.
+- NotificationAdapter.
+- AIProviderAdapter.
+- SpeechToTextAdapter.
+
+Provide:
+
+- Mock implementations.
+- Simulated responses.
+- Integration status.
+- Last sync time.
+- Error state.
+- Retry queue.
+- Idempotency key.
+- Integration logs.
+
+Create environment variables.
+
+Never hardcode secrets.
+
+Never expose server credentials in client code.
+
+---
+
+## 23. DEMO DATA
+
+Create realistic synthetic Bangladesh-oriented demo data.
+
+Include:
+
+- One demo City Corporation.
+- Five demo wards.
+- At least 30 assets.
+- Four issue categories.
+- Five departments.
+- 10–15 government services.
+- 20–30 government document records.
+- 50+ complaint cases.
+- Parent cases.
+- Department sub-tasks.
+- Dependencies.
+- Evidence.
+- Feedback.
+- Reopened cases.
+- Blocked cases.
+- Overdue cases.
+- Escalated cases.
+- Routing review cases.
+- Duplicate candidates.
+
+Use realistic Bangla complaint descriptions.
+
+Example:
+
+"আমাদের এলাকার ড্রেনটি অনেকদিন ধরে বন্ধ। বৃষ্টির সময় পানি রাস্তায় উঠে যায়।"
+
+"গত তিনদিন ধরে রাস্তার বাতি জ্বলছে না।"
+
+"রাস্তার মাঝখানে বড় গর্ত হয়েছে। দুর্ঘটনার ঝুঁকি রয়েছে।"
+
+"আমাদের গলিতে ময়লা জমে আছে।"
+
+Do not use real citizens' personal information.
+
+---
+
+## 24. USER EXPERIENCE REQUIREMENTS
+
+The entire application must be responsive.
+
+Support:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+
+Create:
+
+- Responsive sidebar.
+- Mobile navigation.
+- Search.
+- Filters.
+- Data tables.
+- Pagination.
+- Detail pages.
+- Dialogs.
+- Forms.
+- Notifications.
+- Accessible keyboard navigation.
+
+The application must work in Bangla and English.
+
+Bangla should be the default citizen language.
+
+Officer and Admin interfaces may use bilingual labels.
+
+---
+
+## 25. ERROR HANDLING & RESILIENCE
+
+Implement:
+
+- API error handling.
+- Retry mechanisms.
+- Error boundaries.
+- Loading states.
+- Offline draft saving.
+- Network failure indicators.
+- Stale data warnings.
+- Integration unavailable states.
+- Duplicate transaction prevention.
+- Idempotency.
+- Backup and recovery documentation.
+
+Never display stale information as live data.
+
+Show:
+
+- Last synchronized time.
+- Source status.
+- Data availability.
+
+---
+
+## 26. TESTING
+
+Create meaningful automated tests.
+
+### Unit Tests
+
+- Classification.
+- Normalization.
+- Responsibility rules.
+- Case state transitions.
+- SLA calculations.
+- Dependency logic.
+- Duplicate scoring.
+- Permissions.
+
+### Integration Tests
+
+- Case creation.
+- Routing review.
+- Parent case approval.
+- Sub-task creation.
+- Dependency blocking.
+- Evidence submission.
+- Resolution verification.
+- Reopening.
+- Closure.
+- Notifications.
+
+### E2E Tests
+
+Test the following complete journey:
+
+1. Citizen submits a complaint.
+2. AI classifies the complaint.
+3. System recommends department.
+4. Supervisor reviews routing.
+5. Parent case is approved.
+6. Sub-tasks are created.
+7. Officers update tasks.
+8. Evidence is submitted.
+9. Supervisor verifies evidence.
+10. Citizen receives notification.
+11. Citizen requests reopening.
+12. Case is reopened.
+13. New evidence is submitted.
+14. Case is resolved.
+15. Case is closed.
+16. Audit history is available.
+
+Also test:
+
+- Unauthorized access.
+- Cross-department access restrictions.
+- Invalid transitions.
+- API failures.
+- Duplicate submissions.
+
+---
+
+## 27. 12-WEEK R&D IMPLEMENTATION PLAN
+
+Organize implementation into these phases.
+
+### Weeks 1–2
+
+- Requirement analysis.
+- Workflow review.
+- Data inventory.
+- Database design.
+- Security design.
+- UI architecture.
+
+Deliverable:
+- Problem map.
+- Gap matrix.
+- Data specification.
+- Architecture.
+
+### Weeks 3–4
+
+- Ward and asset mapping.
+- Department configuration.
+- Responsibility rules.
+- Data dictionary.
+- Threat model.
+
+Deliverable:
+- Data specification.
+- Routing rules.
+- Security design.
+
+### Weeks 5–6
+
+- Citizen portal.
+- Complaint intake.
+- Case ID.
+- Officer console.
+- Service catalogue.
+
+Deliverable:
+- Initial end-to-end prototype.
+
+### Weeks 7–8
+
+- Parent case.
+- Sub-tasks.
+- Dependencies.
+- SLA.
+- Notifications.
+- Evidence.
+- Reopen workflow.
+
+Deliverable:
+- Multi-department case demonstration.
+
+### Weeks 9–10
+
+- Bangla classification.
+- RAG.
+- Duplicate detection.
+- Research dashboard.
+- Usability testing.
+
+Deliverable:
+- Model evaluation.
+- Usability report.
+
+### Week 11
+
+- Security testing.
+- RBAC testing.
+- API failure handling.
+- Audit review.
+
+Deliverable:
+- Security findings.
+- Remediation list.
+
+### Week 12
+
+- Baseline comparison.
+- Final demo.
+- KPI dashboard.
+- Pilot readiness.
+
+Deliverable:
+- R&D report.
+- Pilot readiness report.
+- Next-phase plan.
+
+---
+
+## 28. REQUIRED DELIVERABLES
+
+Create the complete working application.
+
+Include:
+
+- Full source code.
+- Database schema.
+- SQL migrations.
+- Seed data.
+- Authentication.
+- Role-based access.
+- Citizen portal.
+- Officer console.
+- Supervisor console.
+- Admin panel.
+- Research dashboard.
+- AI pipeline.
+- Responsibility engine.
+- Parent case workflow.
+- Evidence verification.
+- Feedback and reopening.
+- Government service discovery.
+- RAG assistant.
+- Notification system.
+- Integration adapters.
+- Unit tests.
+- Integration tests.
+- E2E tests.
+- README.
+- Environment variable documentation.
+- Deployment instructions.
+- Demo credentials.
+- Demo scenarios.
+- R&D feature mapping document.
+
+---
+
+## 29. DEVELOPMENT RULES
+
+Follow these rules strictly.
+
+1. Read the complete R&D document first.
+2. Understand the entire architecture before coding.
+3. Do not omit any major R&D module.
+4. Do not create only frontend mockups.
+5. Do not implement buttons that do nothing.
+6. Every major UI action must perform a real operation.
+7. Use persistent database storage.
+8. Implement actual CRUD.
+9. Implement server-side permissions.
+10. Implement real case state transitions.
+11. Implement real parent/sub-task relationships.
+12. Implement actual dependency logic.
+13. Implement actual evidence upload.
+14. Implement real audit history.
+15. Implement meaningful research metrics.
+16. Use synthetic data where government data is unavailable.
+17. Clearly identify mock integrations.
+18. Never fabricate government API access.
+19. Never fabricate evaluation results.
+20. Never allow AI to approve final closure.
+21. Never automatically merge duplicate cases.
+22. Never treat citizen silence as satisfaction.
+23. Preserve original complaint text.
+24. Explain AI recommendations.
+25. Escalate uncertain cases to humans.
+26. Maintain a clean architecture.
+27. Avoid duplicated components.
+28. Avoid unnecessary complexity.
+29. Keep the application production-oriented.
+30. Do not stop after generating a plan.
+
+---
+
+## 30. EXECUTION INSTRUCTIONS
+
+Start by inspecting the existing project.
+
+If an existing codebase is available:
+
+- Preserve compatible existing code.
+- Identify current dependencies.
+- Inspect the current architecture.
+- Reuse useful components.
+- Refactor where necessary.
+
+If no project exists:
+
+- Create the Next.js project.
+- Configure TypeScript.
+- Configure Tailwind.
+- Configure shadcn/ui.
+- Configure Supabase.
+- Set up the project architecture.
+
+Then execute the following:
+
+### Phase A: Foundation
+
+- Project setup.
+- Architecture.
+- Database.
+- Authentication.
+- RBAC.
+- Design system.
+
+### Phase B: Core Application
+
+- Citizen portal.
+- Complaint intake.
+- AI pipeline.
+- Responsibility engine.
+- Case management.
+- Parent/sub-task workflow.
+
+### Phase C: Operational Application
+
+- Officer console.
+- Supervisor console.
+- Admin panel.
+- Evidence verification.
+- Reopen and appeal.
+
+### Phase D: AI & Research
+
+- Classification.
+- Duplicate detection.
+- RAG.
+- Evaluation.
+- Analytics.
+
+### Phase E: Testing & Finalization
+
+- Tests.
+- Security.
+- Error handling.
+- Documentation.
+- Demo data.
+- Deployment.
+
+Do not stop at Phase A.
+
+Do not stop after building the homepage.
+
+Do not stop after creating dashboard cards.
+
+Continue until all major requirements have been implemented and tested.
+
+If execution limits prevent completion in one session, maintain a development checklist, record completed work, and continue from the unfinished requirements.
+
+---
+
+## 31. FINAL ACCEPTANCE CRITERIA
+
+The prototype is considered complete only when:
+
+- A citizen can submit a complete complaint.
+- The complaint receives a unique case ID.
+- AI-assisted classification works.
+- Responsibility recommendations are explainable.
+- Human routing review works.
+- Parent case creation works.
+- Multiple department tasks can be created.
+- Dependencies work correctly.
+- Officers can update tasks.
+- Evidence can be uploaded.
+- Evidence can be reviewed.
+- Cases can be reopened.
+- Cases can be closed with approval.
+- Citizen tracking works.
+- Government service discovery works.
+- RAG answers contain source information.
+- Duplicate suggestions work.
+- Notifications work.
+- Role permissions work.
+- Audit history works.
+- Analytics work.
+- Research metrics are calculated from actual records.
+- Demo data is clearly identified.
+- All major pages are responsive.
+- Core workflows pass automated tests.
+- Documentation is complete.
+
+---
+
+## 32. FIRST ACTION
+
+Now begin.
+
+First inspect the complete R&D document and current project.
+
+Create a requirement-to-feature mapping.
+
+Then implement the application systematically.
+
+Do not merely explain what should be built.
+
+Build it.
+
+The final result must be a fully functional, professional, end-to-end Nagorik Sathi AI prototype aligned with the R&D proposal.
+
+Your priority is:
+
+**R&D fidelity → Functional workflow → Security → Data correctness → AI explainability → UI quality → Research evaluation.**
+

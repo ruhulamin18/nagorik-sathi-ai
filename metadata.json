@@ -1,0 +1,6 @@
+{
+  "name": "Nagorik Sathi AI",
+  "description": "বাংলাদেশের সিটি কর্পোরেশনভিত্তিক নাগরিক সেবা সমন্বয় ও সমস্যা সমাধান প্ল্যাটফর্ম (R&D Prototype)",
+  "requestFramePermissions": ["microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-bangla), sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
+    color: #1E293B;
+    background-color: #F8FAFC;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  th,
+  td,
+  li {
+    font-family: var(--font-bangla), sans-serif;
+  }
+}
